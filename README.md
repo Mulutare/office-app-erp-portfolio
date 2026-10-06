@@ -135,3 +135,139 @@ Provides structured reporting views and historical reporting support for busines
 │ Recruitment Module│
 │   Private ERP     │
 └───────────────────┘
+```
+
+---
+
+## Background Processing
+
+OfficeApp ERP uses server-side background workers for operations that should not depend on browser requests.
+
+Production workloads include:
+
+- internal ERP integration processing
+- attendance reminder processing
+- recruitment mailbox synchronization
+- Careers Portal synchronization
+- security metadata maintenance
+
+Workers use scheduled execution, locking, bounded workloads, and execution tracking.
+
+---
+
+## Security Architecture
+
+The platform was designed around separation of responsibilities and restricted access.
+
+Key controls include:
+
+- company-scoped role-based access control
+- permission checks for business operations
+- CSRF protection
+- private document storage
+- audit trails
+- secure Careers Portal integration
+- replay protection and request signing
+- rate limiting
+- duplicate submission protection
+- controlled production configuration
+
+The public Careers Portal does not expose the private ERP application to applicants.
+
+---
+
+## Recruitment & Careers Workflow
+
+```text
+HR creates vacancy
+        │
+        ▼
+Internal review / opening
+        │
+        ▼
+Authorized publication
+        │
+        ▼
+Careers Portal
+        │
+        ▼
+Applicant submission
+        │
+        ▼
+Secure synchronization
+        │
+        ▼
+ERP Recruitment Inbox
+        │
+        ▼
+Screening and human review
+        │
+        ▼
+Interview / evaluation
+        │
+        ▼
+Final recruitment decision
+```
+
+---
+
+## Production Engineering
+
+The project also includes operational engineering for:
+
+- Linux / cPanel production deployment
+- MySQL migration management
+- background cron processing
+- task execution monitoring
+- production backups
+- rollback procedures
+- database diagnostics
+- integration troubleshooting
+- recovery documentation
+
+Detailed production configuration is intentionally excluded from this public repository.
+
+---
+
+## Engineering Areas Demonstrated
+
+This project demonstrates experience with:
+
+- ERP system architecture
+- PHP backend development
+- relational database design
+- transactional business logic
+- role-based authorization
+- modular application design
+- background processing
+- external system integration
+- secure file handling
+- business intelligence integration
+- production deployment
+- Linux server administration
+- troubleshooting and recovery
+
+---
+
+## Screenshots
+
+Sanitized screenshots of selected modules will be added here:
+
+- Dashboard
+- Sales
+- Inventory & Warehousing
+- Human Resources
+- Attendance
+- Recruitment
+- Careers Portal
+- Reporting
+
+> All screenshots are sanitized to exclude credentials, personal information, confidential business information, and production infrastructure details.
+
+---
+
+## Source Code Notice
+
+The complete OfficeApp ERP source code is maintained in a private repository.
+
+This public repository is a portfolio and technical case study only. It does not contain production source code, database dumps, credentials, API secrets, private documents, employee records, applicant records, or infrastructure configuration.
