@@ -27,6 +27,8 @@ The system includes modules for:
 - Power BI reporting and historical analysis
 
 The application is designed around modular business services, company-scoped access control, controlled database migrations, background workers, auditability, and production-safe deployment procedures.
+<img width="938" height="433" alt="image" src="https://github.com/user-attachments/assets/a7b740ee-299c-4530-af15-55f9bf301dc8" />
+
 
 ---
 
@@ -89,7 +91,8 @@ The integration supports:
 
 Provides structured reporting views and historical reporting support for business intelligence and management analysis.
 
----
+---<img width="1493" height="887" alt="image" src="https://github.com/user-attachments/assets/27058f05-c710-45ff-bbf4-23e4da1c1971" />
+
 
 ## High-Level Architecture
 
